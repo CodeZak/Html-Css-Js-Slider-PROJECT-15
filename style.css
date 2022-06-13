@@ -11,48 +11,84 @@
 
 
 main {
+    width: 95vw;
     max-width: 1200px;
     margin: auto;
+
 }
 
 .container {
     margin-top: 80px;
     width: 100%;
-    position: relative;
     text-align: center;
+
+}
+.imgContainer {
+    width: 100%;
+    height: 500px;
+    border: 6px solid rgb(3, 137, 190) ;
+    border-radius: 15px;
+    overflow: hidden ;
+    position: relative;
+
+}
+
+
+.slider {
+    height: 100%;
+    width: 100%;
+    transition: 0.8s;
+    position: absolute;
 
 }
 
 img {
     width: 100%;
-    height: 500px;
+    height: 100%;
     object-fit: cover;
-    object-position: 50% 0%;
-    border: 6px solid rgb(3, 137, 190) ;
 
 }
 
-.counter {
-    position: absolute;
+.slider:first-child {
+left: 100%;
+}
+
+span {
+    position: relative;
     font-size: 5em;
     font-weight: 600;
-    top: 250px;
-    left:600px;
-    transform: translate(-50%, -50%);
-    color:white;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-
+    top: -310px;
+    left:500x;
+    color:rgb(167, 165, 165);
+    z-index: 555;
 }
 
-.button {
+.buttons {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: fit-content;
+}
+
+.prev, .next {
     margin-top: 10px;
-    font-size: 1.7em;
+    margin-left: 10px;
+    font-size: 1.9em;
     color: rgb(10, 95, 173);
 }
 
 
 
-.button:hover {
+.prev:hover, .next:hover {
     color: rgb(62, 127, 187);
     cursor: pointer;
+}
+
+.next.hide {
+    display: none;
+}
+
+
+.prev.hide {
+    display: none;
 }
